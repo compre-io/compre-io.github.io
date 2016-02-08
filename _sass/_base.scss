@@ -74,14 +74,23 @@ aside {
     border-color: rgba($theme-dark, .5);
     @include sans-serif-font;
     @include transition-all;
-    .navbar-header .navbar-brand {
-        color: $theme-primary;
-        @include sans-serif-font;
-        font-weight: 700;
-        text-transform: uppercase;
-        &:hover,
-        &:focus {
-            color: darken($theme-primary, 10%);
+    .navbar-header {
+        .navbar-brand {
+
+            color: $theme-primary;
+            @include sans-serif-font;
+            font-weight: 100;
+            text-transform: uppercase;
+            &:hover,
+            &:focus {
+                color: darken($theme-primary, 10%);
+            }
+        }
+
+        .logo {
+            padding-top: 5px;
+            margin-right: 10px;
+            display: none;
         }
     }
     .nav {
@@ -89,7 +98,7 @@ aside {
             > a,
             > a:focus {
                 text-transform: uppercase;
-                font-weight: 700;
+                font-weight: 100;
                 font-size: 13px;
                 color: $theme-dark;
                 &:hover {
@@ -128,12 +137,17 @@ aside {
         &.affix {
             background-color: white;
             border-color: rgba($theme-dark, .5);
-            .navbar-header .navbar-brand {
-                color: $theme-primary;
-                font-size: 14px;
-                &:hover,
-                &:focus {
-                    color: darken($theme-primary, 10%);
+            .navbar-header {
+                .logo {
+                    display: block;
+                }
+                .navbar-brand {
+                    color: $theme-primary;
+                    font-size: 14px;
+                    &:hover,
+                    &:focus {
+                        color: darken($theme-primary, 10%);
+                    }
                 }
             }
             .nav > li > a,
@@ -309,7 +323,18 @@ header {
     border-radius: 300px;
     font-weight: 700;
     text-transform: uppercase;
+    &.btn-outline {
+        background: transparent;
+        border: $theme-primary 2px solid;
+        color: $theme-primary;
+        font-weight: 100;
+        &:hover {
+            background: $theme-primary;
+            color: #fff;
+        }
+    }
 }
+
 
 .btn-xl {
     padding: 15px 30px;
@@ -319,6 +344,20 @@ header {
 #contact .fa {
     color: $theme-dark;
     font-size: 4em;
+}
+
+#contato {
+    background: #f0f0f0;
+}
+
+// Modal
+
+.modal {
+    .modal-header {
+        background: $theme-primary;
+        color: #fff;
+    }
+
 }
 
 // Extras
@@ -349,3 +388,76 @@ body {
     -webkit-tap-highlight-color: $theme-dark;
 }
 
+// Pricing Table
+
+.flat {
+    .plan {
+        border-radius: 6px;
+        list-style: none;
+        padding: 0 0 20px;
+        margin: 0 0 15px;
+        background: #fff;
+        text-align: center;
+
+        li {
+            padding: 10px 15px;
+            color: $theme-dark;
+            border-top: 1px solid #f0f0f0;
+            -webkit-transition: 300ms;
+            transition: 300ms;
+
+            &.plan-price {
+                border-top: 0;
+                .old-price {
+                    color: #ccc;
+                    text-decoration: line-through;
+                }
+
+                strong {
+                    font-size: 3.5em;
+                    padding: 10px 0;
+                    font-weight: 100;
+                }
+                .try-text {
+                    color: $theme-primary;
+                    font-variant: small-caps;
+                    font-weight: bold;
+                }
+            }
+
+            &.plan-name {
+                border-radius: 6px 6px 0 0;
+                padding: 15px;
+                font-size: 24px;
+                line-height: 24px;
+                color: #fff;
+                background: $theme-primary;
+                margin-bottom: 15px;
+                border-top: 0;
+            }
+
+            & > strong {
+                color: $theme-primary;
+            }
+
+            &.plan-action {
+                margin-top: 10px;
+                border-top: 0;
+            }
+        }
+
+        &.featured {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+
+            li.plan-name {
+                background: $table-green;
+            }
+        }
+
+        &:hover {
+            background: #f9f9f9;
+        }
+    }
+}
