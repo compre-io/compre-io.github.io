@@ -6,6 +6,7 @@ body {
 
 body {
     @include serif-font;
+    font-weight: 300;
 }
 
 hr {
@@ -79,7 +80,7 @@ aside {
 
             color: $theme-primary;
             @include sans-serif-font;
-            font-weight: 100;
+            font-weight: 300;
             text-transform: uppercase;
             &:hover,
             &:focus {
@@ -98,7 +99,7 @@ aside {
             > a,
             > a:focus {
                 text-transform: uppercase;
-                font-weight: 100;
+                font-weight: 300;
                 font-size: 13px;
                 color: $theme-dark;
                 &:hover {
@@ -179,7 +180,7 @@ header {
         width: 100%;
         .header-content-inner {
             h1 {
-                font-weight: 700;
+                font-weight: 400;
                 text-transform: uppercase;
                 margin-top: 0;
                 margin-bottom: 0;
@@ -321,13 +322,13 @@ header {
     @include sans-serif-font;
     border: none;
     border-radius: 300px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     &.btn-outline {
         background: transparent;
         border: $theme-primary 2px solid;
         color: $theme-primary;
-        font-weight: 100;
+        font-weight: 300;
         &:hover {
             background: $theme-primary;
             color: #fff;
@@ -429,7 +430,7 @@ body {
                 strong {
                     font-size: 3.5em;
                     padding: 10px 0;
-                    font-weight: 100;
+                    font-weight: 300;
                 }
                 .try-text {
                     color: $theme-primary;
