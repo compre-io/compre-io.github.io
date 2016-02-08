@@ -340,6 +340,19 @@ header {
     padding: 15px 30px;
 }
 
+// Sobre
+
+#sobre {
+    p {
+        text-align: justify;
+        font-weight: 100;
+    }
+
+    a.btn {
+        margin-top: 30px;
+    }
+}
+
 // Contact
 #contact .fa {
     color: $theme-dark;
