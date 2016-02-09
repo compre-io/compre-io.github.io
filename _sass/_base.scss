@@ -57,7 +57,7 @@ p {
 }
 
 section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 aside {
@@ -409,7 +409,7 @@ body {
         border-radius: 6px;
         list-style: none;
         padding: 0 0 20px;
-        margin: 0 0 15px;
+        margin: 0 4px 15px;
         background: #fff;
         text-align: center;
 
@@ -447,6 +447,7 @@ body {
                 color: #fff;
                 background: $theme-primary;
                 margin-bottom: 15px;
+                margin-top: 28px;
                 border-top: 0;
             }
 
@@ -461,12 +462,14 @@ body {
         }
 
         &.featured {
-            -webkit-transform: scale(1.1);
-            -ms-transform: scale(1.1);
-            transform: scale(1.1);
-
+            background: #f9f9f9;
             li.plan-name {
                 background: $table-green;
+                margin-top: 0px;
+
+                small {
+                    font-size: 12px;
+                }
             }
         }
 
