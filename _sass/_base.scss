@@ -21,6 +21,7 @@ hr.light {
 
 a {
     @include transition-all;
+    outline: none !important;
     color: $theme-primary;
     &:hover,
     &:focus {
@@ -320,6 +321,7 @@ header {
 
 .btn {
     @include sans-serif-font;
+    outline: none !important;
     border: none;
     border-radius: 300px;
     font-weight: 600;
@@ -477,4 +479,11 @@ body {
             background: #f9f9f9;
         }
     }
+}
+
+.error {
+    color: red;
+    line-height: 34px;
+    padding-left: 15px;
+    display: block;
 }
