@@ -10,3 +10,5 @@ instagram_username: compreoficial
 
 # Build settings
 markdown: kramdown
+
+include: ["_assets"]
