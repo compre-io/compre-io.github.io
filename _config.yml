@@ -10,5 +10,3 @@ instagram_username: compreoficial
 
 # Build settings
 markdown: kramdown
-
-destination: ./site
