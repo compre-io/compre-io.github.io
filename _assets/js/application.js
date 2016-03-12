@@ -21,6 +21,7 @@ jQuery(function($){
             // $.post('http://api.compre.io/v1/stores', fields, function(done, code){
             $.post('http://api.compre.io/v1/mail', fields, function(done){
                 $(form).find('input,textarea').val('');
+                swal({title: "Sucesso!", text: 'Os dados foram enviados com sucesso. Você receberá as suas informações de conta por email.', html: true, type: "success", confirmButtonText: "ok" });
                 // var loginLink = '<br /><p><a target="_blank" href="http://admin.compre.io">Ir para área administrativa</a></p>';
                 // swal({title: "Sucesso!", text: done.message + loginLink, html: true, type: "success", confirmButtonText: "ok" });
                 // $(form).find('input,textarea').val('');
