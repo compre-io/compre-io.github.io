@@ -16,7 +16,7 @@ jQuery(function($){
                 phone: $(form).find('#phone').val(),
                 //description: $(form).find('#description').val(),
                 //plan: $(form).find('#plan').val()
-                message: $(form).find('#message').val() + "\n\n Plano: " + $(form).find('#plan').val()
+                message: $(form).find('#description').val() + "\n\n Plano: " + $(form).find('#plan').val()
             };
             // $.post('http://api.compre.io/v1/stores', fields, function(done, code){
             $.post('http://api.compre.io/v1/mail', fields, function(done){
