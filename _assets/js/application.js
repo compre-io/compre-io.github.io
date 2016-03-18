@@ -14,15 +14,19 @@ jQuery(function($){
                 email: $(form).find('#email').val(),
                 instagram: $(form).find('#instagram').val(),
                 phone: $(form).find('#phone').val(),
-                description: $(form).find('#description').val(),
-                plan: $(form).find('#plan').val()
+                //description: $(form).find('#description').val(),
+                //plan: $(form).find('#plan').val()
+                message: $(form).find('#description').val() + "\n\n Plano: " + $(form).find('#plan').val()
             };
-            $.post('http://api.compre.io/v1/stores', fields, function(done, code){
-                var loginLink = '<br /><p><a target="_blank" href="http://admin.compre.io">Ir para área administrativa</a></p>';
-                swal({title: "Sucesso!", text: done.message + loginLink, html: true, type: "success", confirmButtonText: "ok" });
+            // $.post('http://api.compre.io/v1/stores', fields, function(done, code){
+            $.post('http://api.compre.io/v1/mail', fields, function(done){
                 $(form).find('input,textarea').val('');
+                swal({title: "Sucesso!", text: 'Os dados foram enviados com sucesso. Você receberá as suas informações de conta por email.', html: true, type: "success", confirmButtonText: "ok" });
+                // var loginLink = '<br /><p><a target="_blank" href="http://admin.compre.io">Ir para área administrativa</a></p>';
+                // swal({title: "Sucesso!", text: done.message + loginLink, html: true, type: "success", confirmButtonText: "ok" });
+                // $(form).find('input,textarea').val('');
             }).fail(function(done) {
-                swal({title: "Oops!", text: done.responseJSON.message, type: "error", confirmButtonText: "ok" });
+                swal({title: "Oops!", text: 'Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.', type: "error", confirmButtonText: "ok" });
             });
 
             return false;
